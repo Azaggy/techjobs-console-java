@@ -125,4 +125,25 @@ public class JobData {
         }
     }
 
+    public static void findByValue(String value) {
+        loadData();
+        ArrayList<HashMap<String, String>> somejob;
+        somejob = new ArrayList<>();
+        for (HashMap<String, String> row : allJobs) {
+            for (Integer p = 0; p < allJobs.size(); p++) {
+                HashMap<String, String> job = allJobs.get(p);
+                System.out.println("*****");
+                System.out.println("position type: " + job.get("position type"));
+                System.out.println("name: " + job.get("name"));
+                System.out.println("employer: " + job.get("employer"));
+                System.out.println("location: " + job.get("location"));
+                System.out.println("core competency: " + job.get("core competency"));
+                System.out.println("*****");
+                System.out.println(" ");
+            }
+        }
+
+
+    }
+
 }

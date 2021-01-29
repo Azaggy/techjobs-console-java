@@ -121,6 +121,7 @@ public class TechJobs {
             System.out.println("*****");
             System.out.println(" ");
         }
+
             System.out.println("Search term not found. No jobs under this term.");
 
     }
