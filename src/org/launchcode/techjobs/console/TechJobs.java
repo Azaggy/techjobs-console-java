@@ -110,19 +110,23 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-        for (Integer z = 0; z < someJobs.size(); z++) {
-            HashMap<String, String> results = someJobs.get(z);
-            System.out.println("*****");
-            System.out.println("position type: " + results.get("position type"));
-            System.out.println("name: " + results.get("name"));
-            System.out.println("employer: " + results.get("employer"));
-            System.out.println("location: " + results.get("location"));
-            System.out.println("core competency: " + results.get("core competency"));
-            System.out.println("*****");
-            System.out.println(" ");
+        if (someJobs.size() == 0) {
+            System.out.println("Search term not found. Please check spelling and try again.");
+        } else {
+            for (Integer z = 0; z < someJobs.size(); z++) {
+                HashMap<String, String> results = someJobs.get(z);
+                System.out.println("*****");
+                System.out.println("position type: " + results.get("position type"));
+                System.out.println("name: " + results.get("name"));
+                System.out.println("employer: " + results.get("employer"));
+                System.out.println("location: " + results.get("location"));
+                System.out.println("core competency: " + results.get("core competency"));
+                System.out.println("*****");
+                System.out.println(" ");
+            }
         }
 
-            System.out.println("Search term not found. No jobs under this term.");
+//            System.out.println("Search term not found. No jobs under this term.");
 
     }
 }
