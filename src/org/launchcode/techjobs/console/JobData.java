@@ -125,23 +125,22 @@ public class JobData {
         }
     }
 
-    public static void findByValue(String value) {
+    public static ArrayList<HashMap<String, String>> findByValue(String value) {
         loadData();
-        ArrayList<HashMap<String, String>> somejob;
-        somejob = new ArrayList<>();
+        ArrayList<HashMap<String, String>> someJob = new ArrayList<>();
         for (HashMap<String, String> row : allJobs) {
-            for (Integer p = 0; p < allJobs.size(); p++) {
-                HashMap<String, String> job = allJobs.get(p);
-                System.out.println("*****");
-                System.out.println("position type: " + job.get("position type"));
-                System.out.println("name: " + job.get("name"));
-                System.out.println("employer: " + job.get("employer"));
-                System.out.println("location: " + job.get("location"));
-                System.out.println("core competency: " + job.get("core competency"));
-                System.out.println("*****");
-                System.out.println(" ");
+            System.out.println(row);
+            System.out.println(value);
+            System.out.println(row.containsValue(value));
+            String theValue = row.get(value);
+            if (theValue.contains(value)) {
+
+                someJob.add(row);
+                System.out.println(someJob);
             }
+            System.out.println(someJob);
         }
+        return someJob;
 
 
     }
